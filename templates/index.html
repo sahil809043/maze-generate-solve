@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Maze Game</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Maze Game</h1>
+        <p>Generate and solve the maze by selecting start and end points.</p>
+
+        <!-- Button Container -->
+        <div class="button-container">
+            <button id="generateBtn">Generate Maze</button>
+            <button id="solveBtn">Solve Maze</button>
+        </div>
+
+        <!-- Maze Canvas -->
+        <div id="mazeCanvas">
+            <i id="start" style="display: none;">Start</i>
+            <canvas id="mazeBoard" width="400" height="400"></canvas>
+            <i id="end" style="display: none;">End</i>
+        </div>
+    </div>
+
+    <script src="static/js/game.js"></script>
+</body>
+
+</html>

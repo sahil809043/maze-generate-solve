@@ -1,0 +1,103 @@
+/* Resetting some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+Spray+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Lexend+Zetta:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+Spray+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Atma", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    background-image: url(https:cdn.pixabay.com/photo/2022/09/15/06/14/pattern-7455773_1280.png);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 50%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    font-family: "Atma", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    padding: 12px 20px;
+    background-color: lightseagreen;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out, background-color 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+button:hover {
+    background-color: lightgoldenrodyellow;
+    transform: translateY(-2px) scale(1.1);
+}
+
+button:active {
+    background-color: #149174;
+    transform: translateY(0) scale(1);
+}
+
+#mazeCanvas {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+#start {
+    position: absolute;
+    top: 20px;
+    left: -35px;
+    font-size: 24px;
+    color: green;
+    transform: translate(-50%, -50%);
+}
+
+#end {
+    position: absolute;
+    bottom: 0px;
+    right: -25px;
+    font-size: 24px;
+    color: red;
+    transform: translate(50%, 50%);
+}
+
+#mazeCanvas canvas {
+    background-color: lightgoldenrodyellow;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: transform 1s ease;
+}
+
+#mazeCanvas canvas:hover {
+    transform: scale(1.05);
+}
